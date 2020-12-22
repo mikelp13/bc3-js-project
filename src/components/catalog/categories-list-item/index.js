@@ -1,4 +1,9 @@
 import './styles.css';
+// import '../../../../node_modules/handlebars/dist/cjs/handlebars/compiler/base.js';
+// import '../../../../node_modules/handlebars-loader/index.js';
+// import categoryTemplate from './template/category.hbs';
+
+// console.log(categoryTemplate);
 
 
 $(window).on( 'load', function () {
@@ -43,3 +48,5 @@ $(window).on( 'load', function () {
 $(window).on('load', function() {
     console.log( "ready!" );
 });
+
+
