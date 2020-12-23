@@ -9,36 +9,75 @@ import login from './template/login.hbs'
 import { modalBackDrop } from '../modal/modalBackDrop';
 import {data} from '../../data/data';
 
+
 const signUpHeader = document.querySelector('#signUpHeader');
 const signUpDrop = document.querySelector('#signUpDrop');
 const signInHeader = document.querySelector('#signInHeader');
 const signInDrop = document.querySelector('#signInDrop');
 const container = document.querySelector('.modal');
 
-
-// ===============================HEADER==============================
 const headerAuthMobile = document.querySelector('.header-auth-mobile');
 const headerAuth = document.querySelector('.header-auth');
-// console.log(headerAuthMobile);
+
+
+// ===============================HEADER==============================
+
+const logOutForm = () => {
+    modalBackDrop(logOut());
+
+    const btnXcls = document.querySelector('.authForm__btn_cls');
+    const authFormLogOut = document.querySelector('.authForm__btn_logOut');
+    const authFormExit = document.querySelector('.authForm__btn_exit');
+    authFormLogOut.classList.add('active')
+
+    const onXclose = () => {
+        container.classList.remove('is-open');
+    };
+
+    btnXcls.addEventListener('click', onXclose);
+    authFormExit.addEventListener('click', onXclose);
+
+    const logOutUser = () => {
+        if (localStorage.getItem('accessToken')) {
+            localStorage.removeItem('accessToken');
+            data.user = {};
+            data.auth.accessToken = '';
+            data.auth.isAuth = false;
+            headerAuth.innerHTML = login()
+        };
+        // console.log(data);
+        container.classList.remove('is-open');
+    };
+    authFormLogOut.addEventListener('click', logOutUser);
+    console.log(authFormLogOut);
+};
+
 
 const onLoadAuth = () => {
     if (localStorage.getItem('accessToken')) {
         data.auth.isAuth = true;
         data.auth.accessToken = localStorage.getItem('accessToken')
 
-        headerAuth.innerHTML = userLogged()
+
+        const mediaQuery = window.matchMedia('(min-width: 768px)')
+            if (mediaQuery.matches) {
+            headerAuth.innerHTML = userLogged();
+        } else {
+                headerAuthMobile.innerHTML = userLogged();
+                console.log(headerAuthMobile);
+        };
+        
+      
         const loggedUserCarts = document.querySelector('#loggedUser__carts');
         const loggedUserExit = document.querySelector('#loggedUser__exit');
+        // console.log('hi', loggedUserExit);
 
 
 
-      loggedUserExit.addEventListener('click', logOutForm)
-        // проверить почему 2 парі кавічек в токене 
-        //и что Юра подтянет всю остальную инфу по клиенту
-
-        console.log(data);
+        loggedUserExit.addEventListener('click', logOutForm)
+        // console.log(data);
     } else {
-        console.log(data);
+        // console.log(data);
     }
 
 }
@@ -66,6 +105,7 @@ const onHeaderSignUp = (e) => {
     };
 
     const gatherInfo = () => {
+
         // const mistakeEmail = authForm.querySelector('.mistake__email');
         // const mistakePassword = authForm.querySelector('.mistake__password');
         // const options = { minLength: 6, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1 };
@@ -126,18 +166,25 @@ const onHeaderSignUp = (e) => {
                 authForm.signUp.classList.remove('active');
                 authForm.logIn.classList.add('active');
                 const result = await axios.post(`${url}/auth/login`, { ...user });
-                data.user = { ...result.data.user }
                 localStorage.setItem('accessToken', JSON.stringify(result.data.accessToken));
+                data.user = { ...result.data.user }
                 data.auth.accessToken = result.data.accessToken;
-                // console.log('data.auth.accessToken', data.auth.accessToken);
                 data.auth.isAuth = true;
-                headerAuth.innerHTML = userLogged();
+               
+                // console.log('data.auth.accessToken', data.auth.accessToken);
+                // headerAuth.innerHTML = userLogged();
+                 const mediaQuery = window.matchMedia('(min-width: 768px)')
+                    if (mediaQuery.matches) {
+                        headerAuth.innerHTML = userLogged();
+                    } else {
+                        headerAuthMobile.innerHTML = userLogged();
+                        console.log(headerAuthMobile);
+                };
                 container.classList.remove('is-open');
             } catch (error) {
                console.dir(error);
             }
         };
-        
         authForm.signUp.addEventListener('click', onSignUpBtn);
         authForm.logIn.addEventListener('click', onLogInBtn);
     };
@@ -154,35 +201,35 @@ signInDrop.addEventListener('click', onHeaderSignUp);
 
 // ====================================LOG OUT============================================
 
-const logOutForm = () => {
-    modalBackDrop(logOut());
+// const logOutForm = () => {
+//     modalBackDrop(logOut());
 
-    const btnXcls = document.querySelector('.authForm__btn_cls');
-    const authFormLogOut = document.querySelector('.authForm__btn_logOut');
-    const authFormExit = document.querySelector('.authForm__btn_exit');
-    authFormLogOut.classList.add('active')
+//     const btnXcls = document.querySelector('.authForm__btn_cls');
+//     const authFormLogOut = document.querySelector('.authForm__btn_logOut');
+//     const authFormExit = document.querySelector('.authForm__btn_exit');
+//     authFormLogOut.classList.add('active')
 
-    const onXclose = () => {
-        container.classList.remove('is-open');
-    };
+//     const onXclose = () => {
+//         container.classList.remove('is-open');
+//     };
 
-    btnXcls.addEventListener('click', onXclose);
-    authFormExit.addEventListener('click', onXclose);
+//     btnXcls.addEventListener('click', onXclose);
+//     authFormExit.addEventListener('click', onXclose);
 
-    const logOutUser = () => {
-        if (localStorage.getItem('accessToken')) {
-            data.user = {};
-            localStorage.removeItem('accessToken');
-            data.auth.accessToken = '';
-            data.auth.isAuth = false;
-            headerAuth.innerHTML = login()
-        };
-        //выйти в стандартную форму хедера перед выходом из модалки
-        console.log(data);
+//     const logOutUser = () => {
+//         if (localStorage.getItem('accessToken')) {
+//             data.user = {};
+//             localStorage.removeItem('accessToken');
+//             data.auth.accessToken = '';
+//             data.auth.isAuth = false;
+//             headerAuth.innerHTML = login()
+//         };
+//         //выйти в стандартную форму хедера перед выходом из модалки
+//         console.log(data);
 
-        container.classList.remove('is-open');
+//         container.classList.remove('is-open');
         
-    };
-    authFormLogOut.addEventListener('click', logOutUser);
-};
-// logOutForm()
+//     };
+//     authFormLogOut.addEventListener('click', logOutUser);
+// };
+
