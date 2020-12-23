@@ -1,86 +1,11 @@
-{{#each this}}
-<div class="category visible">
-    <div class="category-header">
-        <h2 class="category-title">Распродажа</h2>
-        <a href="" class="category-link" data-category="category">Смотреть все</a>
-    </div>
-    <p class="category-description">
-        Товары домашнего обихода, видео, аудио, наушники, камеры,
-        аксессуары и многое другое.
-    </p>
-    <ul class="category-list sliders">
-
-        {{!-- {{#each category}}
-        <li>{{this}}</li>
-        {{/each}} --}}
-
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-        <li class="category-card sliders-item">
-            <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
-            <p class="category-card__name">Victrola Vintage</p>
-            <div class="category-card__prices">
-                <p class="category-card__price--old">2,000 €</p>
-                <p class="category-card__price--new">1,200 €</p>
-            </div>
-        </li>
-    </ul>
-</div>
-{{/each}}
-
-
 {{!-- <div class="category-js"> </div> --}}
+
+{{#each this}}
+<li class="category-card sliders-item">
+    <img class="category-card__img" src="{{imageUrl}}" alt="photo {{title}}">
+    <p class="category-card__name">{{title}}</p>
+    <div class="category-card__prices">
+        <p class="category-card__price--new">{{price}}</p>
+    </div>
+</li>
+{{/each}}
