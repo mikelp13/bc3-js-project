@@ -47,32 +47,6 @@ $(window).on('load', function() {
     console.log( "ready!" );
 });
 
-// проба загрузки=========================================================
-
-// let addData = [];
-
-// const ulImgRef = document.querySelectorAll('.category-list');
-
-// console.log(ulImgRef);
-
-// const getCall = async () => { 
-//     return await fetch('https://callboard-backend.herokuapp.com/call/ads')
-//         .then(response => response.json())
-//         .then(data => { addData = [...data]; console.log(addData); })
-// }
-
-// const createCategory = async () => {
-//     await getCall();
-//     console.log(addData);
-//     const markup = categoryTemplate(addData);
-//     ulImgRef[0].insertAdjacentHTML('afterbegin', markup);
-//     ulImgRef[1].insertAdjacentHTML('afterbegin', markup);
-//     ulImgRef[2].insertAdjacentHTML('afterbegin', markup);
-//     console.log('markup ready');
-// }
-// createCategory();
-
-// ===================================================================
 
 let addCategoryProperty;
 
@@ -135,22 +109,104 @@ const createСategoryWork = async () => {
 }
 createСategoryWork();
 
-// let addCategoryWork;
+let addCategoryElect;
 
-// const getCallСategoryWork = async () => { 
-//     return await fetch('https://callboard-backend.herokuapp.com/call/specific/work')
-//         .then(response => response.json())
-//         .then(data => {
-//             // console.log(data);
-//             addCategoryWork = [...data];
-//         })
-// }
+const getCallСategoryElect = async () => { 
+    return await fetch('https://callboard-backend.herokuapp.com/call/specific/electronics')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            addCategoryElect = [...data];
+        })
+}
 
-// const createСategoryWork = async () => {
-//     await getCallСategoryWork();
-//     console.log(addCategoryWork);
-//     const markup = categoryTemplate(addCategoryWork);
-//     categoryRefs[3].insertAdjacentHTML('afterbegin', markup);
-//     console.log('markup category ready Work');
-// }
-// createСategoryWork();
+const createСategoryElect = async () => {
+    await getCallСategoryElect();
+    console.log(addCategoryElect);
+    const markup = categoryTemplate(addCategoryElect);
+    categoryRefs[4].insertAdjacentHTML('afterbegin', markup);
+    console.log('markup category ready Elect');
+}
+createСategoryElect();
+
+
+let addCategoryBusiness;
+
+const getCallСategoryBusiness = async () => { 
+    return await fetch('https://callboard-backend.herokuapp.com/call/specific/businessAndServices')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            addCategoryBusiness = [...data];
+        })
+}
+
+const createСategoryBusiness = async () => {
+    await getCallСategoryBusiness();
+    console.log(addCategoryBusiness);
+    const markup = categoryTemplate(addCategoryBusiness);
+    categoryRefs[5].insertAdjacentHTML('afterbegin', markup);
+    console.log('markup category ready Business');
+}
+createСategoryBusiness();
+
+let addCategorySport;
+
+const getCallСategorySport = async () => { 
+    return await fetch('https://callboard-backend.herokuapp.com/call/specific/recreationAndSport')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            addCategorySport = [...data];
+        })
+}
+
+const createСategorySport = async () => {
+    await getCallСategorySport();
+    console.log(addCategorySport);
+    const markup = categoryTemplate(addCategorySport);
+    categoryRefs[6].insertAdjacentHTML('afterbegin', markup);
+    console.log('markup category ready Sport');
+}
+createСategorySport();
+
+let addCategoryFree;
+
+const getCallСategoryFree = async () => { 
+    return await fetch('https://callboard-backend.herokuapp.com/call/specific/free')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            addCategoryFree = [...data];
+        })
+}
+
+const createСategoryFree = async () => {
+    await getCallСategoryFree();
+    console.log(addCategoryFree);
+    const markup = categoryTemplate(addCategoryFree);
+    categoryRefs[7].insertAdjacentHTML('afterbegin', markup);
+    console.log('markup category ready Free');
+}
+createСategoryFree();
+
+let addCategoryTrade;
+
+const getCallСategoryTrade = async () => { 
+    return await fetch('https://callboard-backend.herokuapp.com/call/specific/trade')
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            addCategoryTrade = [...data];
+        })
+}
+
+const createСategoryTrade = async () => {
+    await getCallСategoryTrade();
+    console.log(addCategoryTrade);
+    const markup = categoryTemplate(addCategoryTrade);
+    categoryRefs[8].insertAdjacentHTML('afterbegin', markup);
+    console.log('markup category ready Trade');
+}
+createСategoryTrade();
+
