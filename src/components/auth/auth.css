@@ -1,4 +1,14 @@
 /* ================================ */
+/* .drop__authedUser_menu {
+  display: block;
+  width: 206px;
+  height: 94px;
+} */
+/* .drop_authedUser {
+  font-size: 14px;
+  line-height: 1.214;
+  letter-spacing: 0.02em;
+} */
 
 .authForm {
   background-color: white;
@@ -10,13 +20,20 @@
   transform: translate(-50%);
 }
 
-/* .logOut__wrap {
-  width: 530px;
-  height: 530px;
-  padding: 50px;
-  outline: 1px solid teal;
-  position: relative;
-} */
+.logOut__wrap {
+  background-color: #fff;
+  width: 650px;
+  height: 230px;
+  padding: 60px;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.authForm__btn_cls.logOut {
+  top: 30px;
+  right: 30px;
+}
 
 .authForm__btn_cls {
   position: absolute;
@@ -83,6 +100,14 @@
   justify-content: space-between;
   margin-top: 30px;
 }
+.authForm__buttons {
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  /* padding-top: 60px;
+  padding-bottom: 60px; */
+}
+
 .authForm__btn_signUp,
 .authForm__btn_logIn,
 .authForm__btn_logOut,
@@ -102,11 +127,29 @@
 
   box-shadow: 15px 15px 55px rgba(0, 0, 0, 0.3);
 }
+.authForm__btn_logOut,
+.authForm__btn_exit {
+  width: 210px;
+}
 
 .active {
   color: #ffffff;
   background-color: #ff6b09;
   border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.authForm__btn_exit:hover {
+  color: #ffffff;
+  background-color: #ff6b09;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.authForm__btn_exit:hover .authForm__btn_logOut {
+  background-color: #fff;
+  border: 1px solid #bbbbbb;
+  outline: none;
+  box-shadow: 15px 15px 55px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 767px) {
@@ -124,12 +167,14 @@
     position: relative;
   }
   .authForm__btn_signUp,
-  .authForm__btn_logIn,
-  .authForm__btn_logOut,
-  .authForm__btn_exit {
+  .authForm__btn_logIn {
     width: 117px;
     height: 50px;
   }
+  .authForm__btn_logOut {
+    margin-right: 15px;
+  }
+
   .authForm__btn_signUp,
   .authForm__btn_logIn {
     font-size: 12px;

@@ -1,18 +1,16 @@
 import '../components/auth/auth'
 
-export const loggedUser = {
-    isAuth: false,
-    accessToken: '',
-    signUpUser: {
-        email: '',
-        id: '',
-        registrationDate: '',
+export const data = {
+    auth: {
+        isAuth: false,
+        accessToken: '',
     },
-    logInUser: {
-        email: '',
-        id: '',
-        registrationDate: '',
+    user: {
         calls: [],
         favorites: [],
+        email: '',
+        id: '',
+        registrationDate: '',
     },
-}
+};
+

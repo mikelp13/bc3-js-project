@@ -5,7 +5,6 @@ categoriesList.insertAdjacentHTML('beforeend', categoriesMarkup)
 const categoriesTabletList = document.querySelector('.categories-filter-tablet')
 const categoriesMobileList = document.querySelector('.categories-filter-mobile')
 const filterItem = document.querySelectorAll(".filter-item");
-console.log(filterItem);
 
 // ===========================REFS===================================
 
@@ -84,7 +83,6 @@ function activeCategory(e) {
     }
     e.target.classList.add('active-category');
     }
-    console.dir(e.target.nodeName);
 }
 
 categoriesList.addEventListener('click', activeCategory)

@@ -10,44 +10,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous"></script>
-
 </head>
+
 <body>
+  <div class="spinner" id="spin"></div>
   <!-- header -->
   <header class="header"> 
       <div class="container">
         <div class="mobile-menu-wrapper">
-          <button class="mobile-input-cross"></button>
           <input
             class="mobile-input-closed"
             type="search"
             placeholder="Поиск товаров..."
           />
+          <button class="mobile-input-cross"></button>
           <button class="mobile-input-btn"></button>
           <div class="mobile-menu-closed">
             <button class="close-menu"></button>
             <div class="header-auth-mobile">
-              <button id="signInDrop" class="sign-in__btn" data-btn="signin">Вход</button>
+              <button id="signInDrop" class="sign-in__btn" data-btn="signin">
+                Вход
+              </button>
               <span class="sign-in-up__stick"></span>
               <button id="signUpDrop" class="sign-up__btn" data-btn="signup">
                 Регистрация
               </button>
+
             </div>
-            <div class="mobile-buttons-wrapper">
-              <div class="mobile-filters-wrapper">
-                <button class="header__filters--btn"></button>
-                <span class="header__filters">Фильтры</span>
-              </div>
-              <div class="mobile-clear-filters-wrapper">
-                <button class="header__clear-filter--btn"></button>
-                <span class="header__clear-filter">Очистить</span>
-              </div>
+            <div class="mobile-clear-filters-wrapper">
+              <button class="header__clear-filter--btn"></button>
+              <span class="header__clear-filter">Очистить</span>
             </div>
-            <ul class="categories-filter-mobile"></ul>
           </div>
-          <button class="mobile-burger"></button>
-          <a href="/" class="header__logo"></a>
-          <button class="mobile-search"></button>
+          <ul class="categories-filter-mobile"></ul>
         </div>
         <div class="tablet-upper-wrapper desktop-upper-wrapper">
           <a href="/" class="header__logo"></a>
@@ -58,37 +53,39 @@
           />
           <button class="header__input--btn"></button>
           <div class="header-auth">
-            <button id="signInHeader" class="sign-in__btn" data-btn="signin">Вход</button>
+            <button id="signInHeader" class="sign-in__btn" data-btn="signin">
+              Вход
+            </button>
             <span class="sign-in-up__stick"></span>
-            <button id="signUpHeader" class="sign-up__btn" data-btn="signup">Регистрация</button>
+            <button id="signUpHeader" class="sign-up__btn" data-btn="signup">
+              Регистрация
+            </button>
           </div>
           <a href="#" class="header__create-ad-btn modal-btn">
-            <span>
-              Создать объявление
-            </span>
+            <span> Создать объявление </span>
             <div class="liquid"></div>
           </a>
         </div>
-        <div class="tablet-bottom-wrapper">
-          <ul class="categories-filter"></ul>
-          <input
-            class="header__input header__input--tablet"
-            type="search"
-            placeholder="Поиск товаров..."
-          />
-          <button class="header__input--btn"></button>
-          <div class="filters-wrapper">
-            <button class="header__filters--btn"></button>
-            <span class="header__filters">Фильтры</span>
-          </div>
-          <div class="clear-filters-wrapper">
-            <button class="header__clear-filter--btn"></button>
-            <span class="header__clear-filter">Очистить</span>
-          </div>
-        </div>
-        <ul class="categories-filter-tablet"></ul>
+        <button class="header__create-ad-btn modal-btn">
+          Создать объявление
+        </button>
       </div>
-    </header>
+      <div class="tablet-bottom-wrapper">
+        <ul class="categories-filter"></ul>
+        <input class="header__input header__input--tablet" type="search" placeholder="Поиск товаров..." />
+        <button class="header__input--btn"></button>
+        <div class="filters-wrapper">
+          <button class="header__filters--btn"></button>
+          <span class="header__filters">Фильтры</span>
+        </div>
+        <div class="clear-filters-wrapper">
+          <button class="header__clear-filter--btn"></button>
+          <span class="header__clear-filter">Очистить</span>
+        </div>
+      </div>
+      <ul class="categories-filter-tablet"></ul>
+    </div>
+  </header>
   <main>
     <button class="modal-btn"></button>
     <section class="hero">
@@ -100,13 +97,11 @@
               <p class="hero-slider__price">799</p>
             </div>
             <img class="hero-slider__image" src="./images/hero-img/watch.png" alt="">
-            </li>
+          </li>
         </ul>
         <ul class="side-items">
         </ul>
-
         <ul class="bottom-items">
-        
         </ul>
       </div>
     </section>
@@ -165,16 +160,31 @@
         
       </div>
     </section>
-      <div class="loader"> 
-        <button type="button" class="loader__btn">Загрузить ещё</button>
-      </div>
+      <button class="loader loader__btn-hover">
+        <div class="loader-animation loader__btn">
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <span class="left-loader-wave"></span>
+          <p type="button" class="loader__btn loader-text">Загрузить ещё</p>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+          <span class="right-loader-wave"></span>
+        </div>
+      </button>
       <div class="modal-wrapper">
-      <div class="modal"></div>
-    </div>
-  </main>
-   <footer class="footer">
-     <div class="modalContainer">
-     </div>
+        <div class="modal"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="modalContainer"></div>
       <div class="container">
         <p class="text-1">
           &copy; 2020 &nbsp;&nbsp;<span class="line-1"></span>&nbsp;&nbsp; All
@@ -188,5 +198,5 @@
         </p>
       </div>
     </footer>
-</body>
+  </body>
 </html>

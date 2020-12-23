@@ -26,11 +26,11 @@
 }
 
 .header-auth-mobile .sign-up__btn {
-  color: #fff;
+  color: #818181;
 }
 
 .header-auth-mobile .sign-in__btn {
-  color: #fff;
+  color: #818181;
 }
 
 .sign-up__btn {
@@ -73,6 +73,7 @@
   height: 20px;
   margin: 0 10px;
   background: url(../images/stick.svg);
+  transition: 0.5s ease-in-out;
 }
 
 @media (min-width: 768px) {
