@@ -2,8 +2,11 @@ import './styles.css';
 
 $(function () {
         $(document).on('click touchstart', '.category-card', function(){ 
-            console.log($(this));
-            console.log('card click');
+            modalOpen();
+            console.log('card click', $(this));
         });
     });
 
+function modalOpen () { 
+    // refs.modalwindow.classList.add('is-open');
+};

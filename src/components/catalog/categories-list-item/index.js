@@ -18,7 +18,7 @@ const getCallСategoryProperty = async () => {
 
 const createСategoryProperty = async () => {
     await getCallСategoryProperty();
-    console.log(addCategoryProperty);
+    // console.log(addCategoryProperty);
     const markup = categoryTemplate(addCategoryProperty);
     categoryRefs[0].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Property');
@@ -38,7 +38,7 @@ const getCallСategoryTransport = async () => {
 
 const createСategoryTransport = async () => {
     await getCallСategoryTransport();
-    console.log(addCategoryTransport);
+    // console.log(addCategoryTransport);
     const markup = categoryTemplate(addCategoryTransport);
     categoryRefs[1].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Transport');
@@ -59,7 +59,7 @@ const getCallСategoryWork = async () => {
 
 const createСategoryWork = async () => {
     await getCallСategoryWork();
-    console.log(addCategoryWork);
+    // console.log(addCategoryWork);
     const markup = categoryTemplate(addCategoryWork);
     categoryRefs[2].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Work');
@@ -79,7 +79,7 @@ const getCallСategoryElect = async () => {
 
 const createСategoryElect = async () => {
     await getCallСategoryElect();
-    console.log(addCategoryElect);
+    // console.log(addCategoryElect);
     const markup = categoryTemplate(addCategoryElect);
     categoryRefs[3].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Elect');
@@ -100,7 +100,7 @@ const getCallСategoryBusiness = async () => {
 
 const createСategoryBusiness = async () => {
     await getCallСategoryBusiness();
-    console.log(addCategoryBusiness);
+    // console.log(addCategoryBusiness);
     const markup = categoryTemplate(addCategoryBusiness);
     categoryRefs[4].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Business');
@@ -120,7 +120,7 @@ const getCallСategorySport = async () => {
 
 const createСategorySport = async () => {
     await getCallСategorySport();
-    console.log(addCategorySport);
+    // console.log(addCategorySport);
     const markup = categoryTemplate(addCategorySport);
     categoryRefs[5].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Sport');
@@ -140,7 +140,7 @@ const getCallСategoryFree = async () => {
 
 const createСategoryFree = async () => {
     await getCallСategoryFree();
-    console.log(addCategoryFree);
+    // console.log(addCategoryFree);
     const markup = categoryTemplate(addCategoryFree);
     categoryRefs[6].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Free');
@@ -160,7 +160,7 @@ const getCallСategoryTrade = async () => {
 
 const createСategoryTrade = async () => {
     await getCallСategoryTrade();
-    console.log(addCategoryTrade);
+    // console.log(addCategoryTrade);
     const markup = categoryTemplate(addCategoryTrade);
     categoryRefs[7].insertAdjacentHTML('afterbegin', markup);
     console.log('markup category ready Trade');
