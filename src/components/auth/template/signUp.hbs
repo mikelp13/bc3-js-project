@@ -3,7 +3,7 @@
         {{!-- <svg class="authForm__slsBtn_svg" width="14px" height="14px">
             <use href="./images/auth/close-24px.svg" class="authForm__svg"></use>
         </svg> --}}
-        <img src="" alt="">
+        <img src="{{./images/auth/close-24px.svg}}" alt="">
     </button>
     <div class="authForm__google">
         <p class="authForm__txt">
@@ -21,9 +21,9 @@
             Войдите в приложение используя e-mail и пароль:
         </p>
         <p class="mistake__email"></p>
-        <input type="text" name="email" class="authForm__input" placeholder="Email" />
+        <input type="email" name="email" class="authForm__input" placeholder="Email" />
         <p class="mistake__password"></p>
-        <input type="text" name="password" class="authForm__input" placeholder="Password" />
+        <input type="password" autocomplete="of" name="password" class="authForm__input" placeholder="Password" />
         <div class="authForm__buttons">
             <button type="submit" name="logIn" class="authForm__btn_logIn active">
                 Войти
