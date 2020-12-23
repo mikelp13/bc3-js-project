@@ -1,14 +1,8 @@
 /* ================================ */
-/* .drop__authedUser_menu {
-  display: block;
-  width: 206px;
-  height: 94px;
-} */
-/* .drop_authedUser {
-  font-size: 14px;
-  line-height: 1.214;
-  letter-spacing: 0.02em;
-} */
+.sign-in-up__user {
+}
+.sign-in-up__exit {
+}
 
 .authForm {
   background-color: white;
