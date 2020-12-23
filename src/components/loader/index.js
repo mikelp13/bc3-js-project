@@ -42,7 +42,7 @@ function loaderCategory() {
         if (categoryRef[i].className === 'category unvisible') { 
             categoryRef[i].className = 'category visible';
             const categoryVisibleRef = document.querySelectorAll('.category.visible');
-            if (categoryVisibleRef.length < 9) { return } else {
+            if (categoryVisibleRef.length < 8) { return } else {
                 buttonLoaderRef.className = 'loader__btn hide';
             }
             return;
