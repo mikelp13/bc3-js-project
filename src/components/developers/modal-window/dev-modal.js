@@ -1,4 +1,4 @@
-// import '../../../images/img/hero img/1.jpg';
+import '../modal-window/dev-styles.css';
 import SergeyVishnevskiy from '../img-portret/SergeyVishnevskiy.jpg';
 import YuriiBerezynets from '../img-portret/YuriiBerezynets.jpg';
 import MyhailoKovalchuk from '../img-portret/MyhailoKovalchuk.jpg';
