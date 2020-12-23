@@ -4,6 +4,7 @@
 @import './components/header/css/burger-menu.css';
 @import './components/header/css/header-filters.css';
 @import './components/header/css/header-auth.css';
+@import './components/auth/accCabinet.css';
 
 html {
   box-sizing: border-box;

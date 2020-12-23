@@ -32,9 +32,9 @@ input::-webkit-search-results-decoration {
   height: 44px;
   padding-left: 20px;
   padding-right: 40px;
-  margin-right: 81px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-    5px 5px 15px rgba(0, 0, 0, 0.5);
+  margin-right: auto;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.05),
+    2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-input-closed {
@@ -54,8 +54,8 @@ input::-webkit-search-results-decoration {
   margin-right: 81px;
   opacity: 0;
   transition: 0.5s;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-    5px 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.05),
+    2px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-input {
@@ -109,7 +109,7 @@ input::-webkit-search-results-decoration {
     outline: none;
     width: 405px;
     height: 44px;
-    margin-right: 286px;
+    margin-right: auto;
   }
 
   .tablet-bottom-wrapper .header__input--btn {
