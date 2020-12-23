@@ -7,7 +7,7 @@ import userLogged from './template/userLogged.hbs';
 import userDrop from './template/userDrop.hbs';
 import login from './template/login.hbs'
 import { modalBackDrop } from '../modal/modalBackDrop';
-import {data} from '../../data/data';
+import { data } from '../../data/data';
 
 const signUpHeader = document.querySelector('#signUpHeader');
 const signUpDrop = document.querySelector('#signUpDrop');
