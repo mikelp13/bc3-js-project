@@ -2,7 +2,9 @@
 
 {{#each this}}
 <li class="category-card sliders-item">
-    <img class="category-card__img" src="{{imageUrl}}" alt="photo {{title}}">
+    {{#each imageUrls}}
+    <img class="category-card__img" src="{{this}}" alt="photo {{title}}">
+    {{/each}}
     <p class="category-card__name">{{title}}</p>
     <div class="category-card__prices">
         {{!-- <p class="category-card__price--old">{{price}}</p> --}}
